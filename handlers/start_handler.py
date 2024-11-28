@@ -4,7 +4,7 @@ from telebot import types
 from handlers.state import UserState
 from create_bot import db
 from main import ADMIN_ID
-
+ADMIN_ID  = int(ADMIN_ID)
 @bot.callback_query_handler(func=lambda call: call.data == 'chek')
 @check_subscription_decorator
 def chekBtnCall(call):
