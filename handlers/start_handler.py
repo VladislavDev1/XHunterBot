@@ -183,7 +183,7 @@ def contact_me(call):
 
 
 # ADMIN panel
-@bot.message_handler(func=lambda message: UserState.wait_for_message.get(message.chat.id, {}).get('waiting_for_message', False))
+@bot.message_handler(func=lambda message: UserState.waiting_for_message.get(message.chat.id, {}).get('waiting_for_message', False))
 def message_for_me(message):
     markup = types.InlineKeyboardMarkup(row_width=2)
     item_1 = types.InlineKeyboardButton('Back', callback_data='back')
