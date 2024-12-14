@@ -174,7 +174,7 @@ def contact_me(call):
     bot.edit_message_media(chat_id=call.message.chat.id, message_id=call.message.message_id, media=media, reply_markup=markup)
     img.close()
     
-    UserState.wait_for_message[call.message.chat.id] = {'waiting_for_message': True}
+    UserState.waiting_for_message[call.message.chat.id] = {'waiting_for_message': True}
 
 
     
@@ -193,9 +193,9 @@ def message_for_me(message):
     
     try:
         bot.send_message(ADMIN_ID, f'ID: {message.chat.id}\nПользоветль: {message.from_user.first_name}\nСообщение: {text}')
-        UserState.wait_for_message[message.chat.id]['waiting_for_message'] = False
+        UserState.waiting_for_message[message.chat.id]['waiting_for_message'] = False
         bot.send_message(message.chat.id, '✅', reply_markup=markup)
-    except Exception as e: print(f"error {e}", reply_markup=markup)
+    except Exception as e: print(f"error {e}")
 
 
 @bot.callback_query_handler(func=lambda call: call.data == 'stat')
