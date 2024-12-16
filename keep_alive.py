@@ -5,7 +5,7 @@ from http.server import BaseHTTPRequestHandler
 
 from telebot import types
 
-from create_bot import bot
+from main import bot
 
 
 class handler(BaseHTTPRequestHandler):
@@ -13,7 +13,7 @@ class handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         time.sleep(1.5)
-        bot.set_webhook('https://' + os.environ['VERCEL_URL'])
+        bot.set_webhook('x-hunter-bot-git-main-vladislavs-projects-a7fa5156.vercel.app')
         self.send_response(200)
         self.end_headers()
 
