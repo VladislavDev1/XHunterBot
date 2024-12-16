@@ -1,7 +1,7 @@
 import telebot
 import os
 from Database import Database
-from keep_alive import keep_alive
+
 
 
 
