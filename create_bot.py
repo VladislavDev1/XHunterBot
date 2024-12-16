@@ -1,7 +1,7 @@
 import telebot
 import os
 from Database import Database
-from handlers.keep_alive import keep_alive
+from keep_alive import keep_alive
 
 
 keep_alive()
