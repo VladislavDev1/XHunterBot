@@ -4,7 +4,6 @@ from Database import Database
 from keep_alive import keep_alive
 
 
-keep_alive()
 
 
 
