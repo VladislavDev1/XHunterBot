@@ -8,12 +8,12 @@ import telebot
 import os
 from flask import Flask, request
 
+ADMIN_ID = token=os.environ.get('ADMIN_ID')
 
 # Инициализация Flask-приложения
 app = Flask(__name__)
 
 
-ADMIN_ID = token=os.environ.get('ADMIN_ID')
 
 
 # Маршрут для Webhook
