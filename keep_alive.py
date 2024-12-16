@@ -5,7 +5,7 @@ from http.server import BaseHTTPRequestHandler
 
 from telebot import types
 
-from create_bot.py import bot
+from create_bot import bot
 
 
 class handler(BaseHTTPRequestHandler):
