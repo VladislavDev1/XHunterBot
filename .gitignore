@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.db
+database.db
+audio.mp3
+.env
+.env.*
+!.env.example

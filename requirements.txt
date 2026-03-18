@@ -1,0 +1,14 @@
+telebot==0.0.5
+flask
+gTTS
+aiosqlite
+phonenumbers
+aiohttp
+dotenv
+g4f
+flask_limiter
+groq
+asyncpg
+tortoise-orm
+yt-dlp
+instaloader
