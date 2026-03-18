@@ -1,8 +1,9 @@
-__pycache__/
-*.py[cod]
-*.db
-database.db
-audio.mp3
+venv
+baclup.py
+__pycache__
+test.py
+voice.xml
 .env
 .env.*
 !.env.example
+
